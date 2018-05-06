@@ -1,0 +1,170 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBB32F70-4B10-4C70-84B8-4EE2364F8B71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageProcessing</RootNamespace>
+    <AssemblyName>ImageProcessing</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrightnessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrightnessForm.Designer.cs">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContrastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContrastForm.Designer.cs">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CropForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CropForm.Designer.cs">
+      <DependentUpon>CropForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GammaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GammaForm.designer.cs">
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageHandler.cs" />
+    <Compile Include="ImageInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageInfo.Designer.cs">
+      <DependentUpon>ImageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageProcessing.Designer.cs">
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertImageForm.Designer.cs">
+      <DependentUpon>InsertImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertShapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertShapeForm.Designer.cs">
+      <DependentUpon>InsertShapeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTextForm.Designer.cs">
+      <DependentUpon>InsertTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BrightnessForm.resx">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContrastForm.resx">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CropForm.resx">
+      <DependentUpon>CropForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GammaForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfo.resx">
+      <DependentUpon>ImageInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageProcessing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertImageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InsertImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertShapeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InsertShapeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTextForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InsertTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResizeForm.resx">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResizeForm.Designer.cs">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
